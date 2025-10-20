@@ -21,6 +21,7 @@ variable "ssh_key_path" {
   default = "~/.ssh/id_rsa.pub"
 }
 
+# Cloudflare DNS64
 variable "nameserver" {
   default = "2606:4700:4700::64"
 

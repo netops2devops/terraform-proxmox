@@ -1,7 +1,9 @@
 .terraform
 *.lock.hcl
+*.lock.info
 *.tfvars
 *.tfstate
 *.backup
 id_rsa.pub
 plan
+!example.tfvars

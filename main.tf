@@ -76,6 +76,7 @@ resource "proxmox_vm_qemu" "ubuntu24" {
   nameserver = var.nameserver
 
   # Construct ipconfig strings for Cloud-Init
+  # Set IPv4 values = null in tfvars to create IPv6 only VMs
   ipconfig0 = join(",", compact([
     each.value.ipv4 != null ? "ip=${each.value.ipv4}/${each.value.prefix4}" : null,
     each.value.gateway4 != null ? "gw=${each.value.gateway4}" : null,

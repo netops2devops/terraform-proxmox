@@ -3,9 +3,10 @@ output "vm_summary" {
   value = {
     for k, v in proxmox_vm_qemu.ubuntu24 :
     k => {
-      vmid = v.vmid
-      node = v.target_node
-      name = v.name
+      vmid      = v.vmid
+      node      = v.target_node
+      name      = v.name
+      ipconfig0 = v.ipconfig0
     }
   }
 }
