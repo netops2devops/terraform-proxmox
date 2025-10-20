@@ -24,8 +24,8 @@ variable "ssh_key_path" {
 # Cloudflare DNS64
 variable "nameserver" {
   default = "2606:4700:4700::64"
-
 }
+
 variable "vms" {
   description = "Map of VM configurations"
   type = map(object({
