@@ -1,0 +1,7 @@
+.terraform
+*.lock.hcl
+*.tfvars
+*.tfstate
+*.backup
+id_rsa.pub
+plan
