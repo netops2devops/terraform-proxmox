@@ -7,6 +7,7 @@ output "vm_summary" {
       node      = v.target_node
       name      = v.name
       ipconfig0 = v.ipconfig0
+      vlan      = v.network[0].tag
     }
   }
 }
