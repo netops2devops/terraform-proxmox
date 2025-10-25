@@ -1,4 +1,6 @@
- wget -P /var/lib/vz/template/iso/ https://cloud-images.ubuntu.com/daily/server/releases/24.04/release/ubuntu-24.04-server-cloudimg-amd64.img
+https://pve.proxmox.com/wiki/Cloud-Init_Support
+
+wget -P /var/lib/vz/template/iso/ https://cloud-images.ubuntu.com/daily/server/releases/24.04/release/ubuntu-24.04-server-cloudimg-amd64.img
 
 qm create 9000 --name "ubuntu-cloud-init-template" --memory 4096 --cores 2 --net0 virtio,bridge=vmbr0
 qm importdisk 9000 /var/lib/vz/template/iso/ubuntu-24.04-server-cloudimg-amd64.img local-lvm
