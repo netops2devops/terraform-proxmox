@@ -7,3 +7,5 @@
 id_rsa.pub
 plan
 !example.tfvars
+esnet-cu-pubkeys.pub
+*.tfstate.d

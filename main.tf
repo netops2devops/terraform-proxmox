@@ -39,7 +39,7 @@ resource "proxmox_vm_qemu" "ubuntu24" {
     scsi {
       scsi0 {
         disk {
-          storage = "local-lvm"
+          storage = var.disk_storage
           size    = "32G"
         }
       }
@@ -47,7 +47,7 @@ resource "proxmox_vm_qemu" "ubuntu24" {
     ide {
       ide2 {
         cloudinit {
-          storage = "local-lvm"
+          storage = var.cloud_init_storage
         }
       }
     }

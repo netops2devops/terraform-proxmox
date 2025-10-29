@@ -9,6 +9,14 @@ variable "template_vm" {
   default = "ubuntu-cloud-init-template"
 }
 
+variable "disk_storage" {
+  default = "local-lvm"
+}
+
+variable "cloud_init_storage" {
+  default = "local-lvm"
+}
+
 variable "ciuser" {
   default = "ubuntu"
 }
@@ -21,9 +29,9 @@ variable "ssh_key_path" {
   default = "~/.ssh/id_rsa.pub"
 }
 
-# Cloudflare DNS64
+# public DNS64 cloudflare, google
 variable "nameserver" {
-  default = "2606:4700:4700::64"
+  default = "2606:4700:4700::64 2001:4860:4860::64"
 }
 
 variable "vms" {
